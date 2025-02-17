@@ -1,14 +1,14 @@
 class NodeRun < Formula
   desc "Node-run (nr) - Your task runner"
   homepage "https://github.com/silesky/node-run"
-  version "v1.0.13"
+  version "v1.0.14"
 
   if Hardware::CPU.arm?
-    url "https://github.com/silesky/node-run/releases/download/v1.0.13/nr-darwin-arm64"
-    sha256 "71439e2c106ec3769bbd686b43520a5ee9db7ae74920338e0e0bad207f61c0e4"
+    url "https://github.com/silesky/node-run/releases/download/v1.0.14/nr-darwin-arm64"
+    sha256 "5c9e26353d9c4806a7d3393e96bd81a9f0358d61a6da5fe4858b26eede7bd437"
   else
-    url "https://github.com/silesky/node-run/releases/download/v1.0.13/nr-darwin-amd64"
-    sha256 "8dbe496023fb0149edfc140633426f78ea6e7afb568f2fb5d624e29f67ea25c4"
+    url "https://github.com/silesky/node-run/releases/download/v1.0.14/nr-darwin-amd64"
+    sha256 "6402b868a4dce8421bfefa21f2ec081e3cb1979e8ea5ace219bd26796073bda4"
   end
 
   license "MIT"
