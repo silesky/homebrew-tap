@@ -1,30 +1,30 @@
 class NodeRun < Formula
   desc "Node-run (nr) - Your task runner"
   homepage "https://github.com/silesky/node-run"
-  version "v1.0.7"
+  version "v1.0.8"
 
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/silesky/node-run/releases/download/v1.0.7/nr-darwin-amd64"
-      sha256 "be82e30fdcbda1dfc86c3b1ed0a81858d07b009ab8367bc35bf1cf818c215065"
+      url "https://github.com/silesky/node-run/releases/download/v1.0.8/nr-darwin-amd64"
+      sha256 "8be378735e912b63c6a0f2c18cd8bba32cdadd687e33a02d545cf1131e068e1a"
     else
-      url "https://github.com/silesky/node-run/releases/download/v1.0.7/nr-darwin-arm64"
-      sha256 "93b4126ec27846d94f04577fe09813f13b3d4381073fd7891d5b172c43678850"
+      url "https://github.com/silesky/node-run/releases/download/v1.0.8/nr-darwin-arm64"
+      sha256 "f80f284e01f03b7b72843d7a221cb5c77642d6def8597d2321ce20da221d2c43"
     end
   else
     if Hardware::CPU.intel?
-      url "https://github.com/silesky/node-run/releases/download/v1.0.7/nr-linux-amd64"
-      sha256 "5de68e8ab7cf73ecea3b8d0798a7dee23baddc7d641b0f88186eb5292f3305ea"
+      url "https://github.com/silesky/node-run/releases/download/v1.0.8/nr-linux-amd64"
+      sha256 "b387bbc1cff5f446bb24c168e8699a216de609c379dd214b239b4b25a83e21e6"
     else
-      url "https://github.com/silesky/node-run/releases/download/v1.0.7/nr-linux-arm64"
-      sha256 "7dae8f959367ffdc5d9688811e42cd20ee8b4ae55b044a9a7a5ea1880d57862a"
+      url "https://github.com/silesky/node-run/releases/download/v1.0.8/nr-linux-arm64"
+      sha256 "1520953d30cbf8729da815d687732820396f78ecb2b50136d895fc917767161d"
     end
   end
 
   license "MIT"
 
   def install
-    bin.install "nr"
+    bin.install Dir["nr-*"].first => "nr"
   end
 
   test do
