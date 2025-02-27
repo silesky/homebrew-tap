@@ -1,27 +1,27 @@
 class NodeRun < Formula
-  desc "Node-run (nr) - Your task runner"
+  desc "node-run (nrun) - An fzf-like npm script runner with monorepo support"
   homepage "https://github.com/silesky/node-run"
-  version "v1.1.2"
+  version "v1.1.3"
 
   if Hardware::CPU.arm?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.2/nr-darwin-arm64"
-    sha256 "f6708ffbca540036604c7d0036b3a35f14808629060fc867e313ff852ece4060"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.3/nrun-darwin-arm64"
+    sha256 "db7d05da802be20737856e86a3755ca83df36c62069d72ed6ec9e04080f927d9"
   else
-    url "https://github.com/silesky/node-run/releases/download/v1.1.2/nr-darwin-amd64"
-    sha256 "817bb5b3a26bf2f21a410897597f01f5f0f8fe9e01f2aec65182c56093677279"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.3/nrun-darwin-amd64"
+    sha256 "da42754e954b823d10896d6fb937b59687d1b215f46bdd7b5559ba8a2aff566a"
   end
 
   license "MIT"
 
   def install
     if Hardware::CPU.arm?
-      bin.install "nr-darwin-arm64" => "nr"
+      bin.install "nrun-darwin-arm64" => "nrun"
     else
-      bin.install "nr-darwin-amd64" => "nr"
+      bin.install "nrun-darwin-amd64" => "nrun"
     end
   end
 
   test do
-    system "#{bin}/nr", "--help"
+    system "#{bin}/nrun", "--help"
   end
 end
