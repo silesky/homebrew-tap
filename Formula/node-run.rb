@@ -1,20 +1,20 @@
 class NodeRun < Formula
   desc "node-run (nrun) - An fzf-like npm script runner with monorepo support"
   homepage "https://github.com/silesky/node-run"
-  version "v1.1.4"
+  version "v1.1.5"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.4/nrun-darwin-arm64"
-    sha256 "1d33a98c58522a29f08c59dc3e1bd576847a6e151c10eb671cee907759df3767"
-  elif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.4/nrun-darwin-amd64"
-    sha256 "e2473869798c9fe9697ac0e525328e8cf95980809ff431ca54311dac8c0ae1fd"
-  elif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.4/nrun-linux-arm64"
-    sha256 "cd1eb0eab43db220d3f8629c97213aeb7896259d222856b693016522a128282f"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.5/nrun-darwin-arm64"
+    sha256 "cf5007609fc03a87eac636a7fa01baa7e2e5531228a6066ebb991e2a641a7545"
+  elsif OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/silesky/node-run/releases/download/v1.1.5/nrun-darwin-amd64"
+    sha256 "bfeb03ee1d50f2f6c27c7da1c5c2ef199858570eb7ac3ac72c009eed035d5619"
+  elsif OS.linux? && Hardware::CPU.arm?
+    url "https://github.com/silesky/node-run/releases/download/v1.1.5/nrun-linux-arm64"
+    sha256 "f7f5631b78e2c0c6823cee2f5bd0151b0e0cf6b3595ec92be92657d9dabcd71d"
   else
-    url "https://github.com/silesky/node-run/releases/download/v1.1.4/nrun-linux-amd64"
-    sha256 "3a00c3feae923332b88edd0adf80a8695bfef61a22941972be0b5f10dad9ebba"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.5/nrun-linux-amd64"
+    sha256 "28b5eccbba87ab9252bef73c08b817ec43254c90799100cf2fd5273f1dd62e0c"
   end
 
   license "MIT"
@@ -22,9 +22,9 @@ class NodeRun < Formula
   def install
     if OS.mac? && Hardware::CPU.arm?
       bin.install "nrun-darwin-arm64" => "nrun"
-    elif OS.mac? && Hardware::CPU.intel?
+    elsif OS.mac? && Hardware::CPU.intel?
       bin.install "nrun-darwin-amd64" => "nrun"
-    elif OS.linux? && Hardware::CPU.arm?
+    elsif OS.linux? && Hardware::CPU.arm?
       bin.install "nrun-linux-arm64" => "nrun"
     else
       bin.install "nrun-linux-amd64" => "nrun"
