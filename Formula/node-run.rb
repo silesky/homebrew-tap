@@ -1,20 +1,20 @@
 class NodeRun < Formula
   desc "node-run (nrun) - An fzf-like npm script runner with monorepo support"
   homepage "https://github.com/silesky/node-run"
-  version "v1.1.7"
+  version "v1.1.8"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.7/nrun-darwin-arm64"
-    sha256 "813d22f1ab2c3c0c28593d9d1ae000bf409e4849c03d9b46cc0420a3ca4586f9"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.8/nrun-darwin-arm64"
+    sha256 "dfce849d82864bc44ed7c6cbbbc2c3973bf1e764bd4627bf670ea4777a638f78"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.7/nrun-darwin-amd64"
-    sha256 "6fa4b1dff58521a9401b2e55723f97d15236269f76f13b5e20bde8fd4af11516"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.8/nrun-darwin-amd64"
+    sha256 "5855a33a0b7e7171c758ff5a7721e03c7e962968b4da51cea4fc7e1974a8cc8a"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/silesky/node-run/releases/download/v1.1.7/nrun-linux-arm64"
-    sha256 "39912e6b90f315daeacf5f9896296cc22bd1e5499007c8a54b5fc767cef4bf3e"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.8/nrun-linux-arm64"
+    sha256 "317a0381ec042ccf8923426edcad4d41330b0b26189f4f2cbe085457e4bf7d4f"
   else
-    url "https://github.com/silesky/node-run/releases/download/v1.1.7/nrun-linux-amd64"
-    sha256 "2371ea5f33aac506764093756a8488c795c02f5e2fd5d3a5e965153e62bb722c"
+    url "https://github.com/silesky/node-run/releases/download/v1.1.8/nrun-linux-amd64"
+    sha256 "11c38d0190808d4f028d0549cc40e8fa2148963745dde5b7f06c62f1da3ad182"
   end
 
   license "MIT"
